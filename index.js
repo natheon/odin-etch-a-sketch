@@ -28,15 +28,23 @@ function drawGrid(gridSize) {
         containerDiv.appendChild(rowDiv);
     
         for (let j=0; j < gridSize; j++) {
+
             const squareDiv = document.createElement("div");
             squareDiv.classList.add("square");
+            squareDiv.style.opacity = 1;
             squareDiv.addEventListener("mouseover", (e) => {
-                squareDiv.classList.toggle("hovered");
+                hoverEffect(e.target);
             })
+            
             rowDiv.appendChild(squareDiv);
         }
     
     }    
+}
+
+function hoverEffect(element) {
+    element.style.opacity = Math.max(element.style.opacity - 0.1, 0);
+    element.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 }
 
 drawGrid(INITIAL_GRID_SIZE);

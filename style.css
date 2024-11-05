@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: stretch;
+    background-color: black;
 }
 
 .row {
@@ -14,11 +15,10 @@
 }
 
 .square {
-    background-color: blue;
     border: 1px solid dark;
     flex: 1 1 auto;
 }
-
+/* 
 div.hovered {
-    background-color: black;
-}
+    background-color: green;
+} */
